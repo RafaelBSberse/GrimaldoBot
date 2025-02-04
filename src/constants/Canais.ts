@@ -1,0 +1,3 @@
+export enum Canais {
+    QUADRO_DE_AVENTURAS = "1325343584270028911",
+}

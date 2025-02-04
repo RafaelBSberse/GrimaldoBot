@@ -1,0 +1,51 @@
+{
+	// Place your GrimaldoBot workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"template_command": {
+		"scope": "typescript",
+		"prefix": "command",
+		"body": [
+			"import { SlashCommandBuilder } from \"discord.js\";",
+			"import ApplicationCommand from \"../templates/ApplicationCommand.js\";",
+			"",
+			"export default new ApplicationCommand({",
+			"    data: new SlashCommandBuilder()",
+			"        .setName(\"\")",
+			"        .setDescription(\"\"),",
+			"    execute(interaction): void {",
+			"    }",
+			"});"
+		],
+		"description": "Cria um novo comando."
+	},
+	"template_event": {
+		"scope": "typescript",
+		"prefix": "event",
+		"body": [
+			"import { Events } from \"discord.js\";",
+			"import ApplicationEvent from \"../templates/ApplicationEvent.js\";",
+			"",
+			"export default new ApplicationEvent({",
+			"    name: Events,",
+			"    once: false,",
+			"    execute: (event) => {",
+			"    }",
+			"});"
+		],
+		"description": "Cria um novo evento."
+	}
+}
